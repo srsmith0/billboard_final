@@ -1,2 +1,11 @@
-<h1>Billboards#index</h1>
-<p>Find me in app/views/billboards/index.html.erb</p>
+<h1>Today's Top Hits</h1>
+
+<% Billboard.all.each do |chart| %>
+<ul>
+  <li>
+    <%= link_to chart.name, billboard_path(chart) %>
+  </li>
+</ul>
+<% end %>
+
+<h3><%= link_to 'Back', billboards_home_path %></h3>

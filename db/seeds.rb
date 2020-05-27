@@ -37,10 +37,12 @@ billboards.each do |chart|
 end
 
 fake_songs.times do |make|
-  artist = Artist.create(name: Faker::Name.name)
+  artist = Artist.create(name: Faker::Hipster.sentence(word_count: 2))
   song = Song.create(title: Faker::Beer.style, artist_id: artist.id)
-  Ranking.create(rank: make % (fake_songs/billboards.size) + 1, billboard_id: (make %billboards.size) + 1, song_id: song.id)
+  Ranking.create(rank: make % (fake_songs/billboards.size) + 1, billboard_id: (make % billboards.size) + 1, song_id: song.id)
 end
+
+puts "seeded!"
 
 
 

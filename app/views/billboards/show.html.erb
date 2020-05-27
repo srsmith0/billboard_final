@@ -1,2 +1,10 @@
-<h1>Billboards#show</h1>
-<p>Find me in app/views/billboards/show.html.erb</p>
+<h1><%= @billboard.name %></h1>
+
+<% @rankings.each do |x| %>
+  
+  <%= "#{x.rank}:  #{x.song.title} By: #{x.song.artist.name}" %>
+  <br />
+  <br />
+<% end %>
+
+<%= link_to "Back to Billboards", billboards_path%>
