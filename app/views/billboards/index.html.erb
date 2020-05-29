@@ -1,5 +1,6 @@
 <h1>Today's Top Hits</h1>
 
+<div class = 'billboards'>
 <% Billboard.all.each do |chart| %>
 <ul>
   <li>
@@ -7,5 +8,6 @@
   </li>
 </ul>
 <% end %>
+</div>
 
 <h3><%= link_to 'Back', billboards_home_path %></h3>

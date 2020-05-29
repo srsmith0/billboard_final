@@ -1,10 +1,12 @@
 <h1><%= @billboard.name %></h1>
 
+<div class="billboard">
 <% @rankings.each do |x| %>
   
   <%= "#{x.rank}:  #{x.song.title} By: #{x.song.artist.name}" %>
   <br />
   <br />
 <% end %>
+</div>
 
-<%= link_to "Back to Billboards", billboards_path%>
+<h3><%= link_to "Back to Billboards", billboards_path%></h3>

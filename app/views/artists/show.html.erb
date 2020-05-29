@@ -1,4 +1,5 @@
 <h1><%= @artist.name %></h1>
+<div class="artists">
 <% @artist.songs.each do |song| %>
 <ul>
   <li>
@@ -7,3 +8,5 @@
   </li>
 </ul>
 <% end %>
+</div>
+<h3><%= link_to "Back", artists_path%>

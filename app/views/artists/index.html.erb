@@ -1,5 +1,6 @@
 <h1>Today's Top Artists</h1>
 
+<div class = "artists">
 <% Artist.all.each do |artist| %>
 <ul>
   <li>
@@ -7,5 +8,6 @@
   </li>
 </ul>
 <% end %>
-
+</div>
 <h3><%= link_to 'Back', billboards_home_path %></h3>
+

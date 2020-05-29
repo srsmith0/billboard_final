@@ -4,7 +4,7 @@ class BillboardsController < ApplicationController
 
   def home
   end
-
+  
   def show
     set_billboard
     @rankings = @billboard.rankings.sort_by { |r| [r.rank] }
